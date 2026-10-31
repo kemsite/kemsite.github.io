@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>kemsite — сайты для малого бизнеса</title>
+<meta name="description" content="Делаю красивые сайты-визитки для малого бизнеса: такси, автоуслуги, мастера. Звонок в одно касание.">
+<meta name="theme-color" content="#07050f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%2307050f%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2722%27 fill=%27%23ec4899%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js"</script>
+<style>
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+:root{--bg:#07050f;--tx:#f4f1ff;--mu:#a79fc0;--line:rgba(255,255,255,.1);--g:linear-gradient(110deg,#8b5cf6,#ec4899 55%,#fb923c);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 Onest,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:Unbounded,Onest,system-ui,sans-serif;line-height:1.12;margin:0;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 20px;position:relative}
+.aur{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.aur i{position:absolute;border-radius:50%;opacity:.6;will-change:transform;animation:drift 16s ease-in-out infinite alternate}
+.aur i:nth-child(1){width:520px;height:520px;background:radial-gradient(circle,#7c3aed,transparent 68%);left:-160px;top:-100px}
+.aur i:nth-child(2){width:460px;height:460px;background:radial-gradient(circle,#db2777,transparent 68%);right:-160px;top:30%;animation-duration:20s;animation-delay:-6s}
+.aur i:nth-child(3){width:420px;height:420px;background:radial-gradient(circle,#ea580c,transparent 68%);left:20%;bottom:-200px;opacity:.28;animation-duration:24s;animation-delay:-12s}
+.pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:3px;background:var(--g);transform-origin:left;transform:scaleX(0);z-index:11}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(7,5,15,.9);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font:600 16px Unbounded,sans-serif;display:flex;align-items:center;gap:10px}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--g);animation:pulse 2.4s ease-out infinite}
+.btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600;padding:15px 28px;border:0;background:transparent;color:var(--tx);transition:transform .15s}
+.btn:hover::after{background:#2a1238}
+.btn:active{transform:scale(.97)}
+.btn.main{color:#14051f;font-weight:800;box-shadow:0 0 26px rgba(236,72,153,.45)}
+.btn:not(.main){box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.main::after,.btn.main:hover::after{background:var(--g)}
+.btn::before{content:"";position:absolute;z-index:-2;left:50%;top:50%;width:max(300%,420px);aspect-ratio:1;transform:translate(-50%,-50%);background:conic-gradient(rgba(255,255,255,0) 0 62%,rgba(255,255,255,.95) 88%,rgba(255,255,255,0) 100%);animation:rotc 3.2s linear infinite;will-change:transform;pointer-events:none}
+.btn::after{content:"";position:absolute;z-index:-1;inset:1.5px;border-radius:inherit;background:#120c24;transition:background .2s}
+
+.btn.sm{padding:10px 20px;font-size:15px}
+.btn:focus-visible{outline:3px solid #fb923c;outline-offset:3px}
+.hero{padding:76px 0 36px;position:relative;overflow-x:clip}
+@supports not (overflow:clip){.hero{overflow:hidden}}
+.ring{position:absolute;right:-140px;top:-30px;width:420px;height:420px;border-radius:50%;border:2px solid transparent;background:conic-gradient(from var(--ang),#8b5cf6,#ec4899,#fb923c,#8b5cf6) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0);animation:rot 16s linear infinite;will-change:transform;opacity:.7;pointer-events:none}
+.hero h1{font-size:clamp(34px,9vw,76px);font-weight:700;max-width:11em}
+.wd{display:inline-block;margin-right:.22em;opacity:0;transform:translateY(46px) rotate(4deg);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*.09s + .15s)}
+.wd.gt{background:linear-gradient(110deg,#8b5cf6,#ec4899,#fb923c,#ec4899,#8b5cf6);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*.09s + .15s)}
+.lead{color:var(--mu);font-size:18px;max-width:30em;margin:24px 0 32px;opacity:0;animation:up .9s .9s cubic-bezier(.2,.8,.2,1) forwards}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .cta{opacity:0;animation:up .9s 1.05s cubic-bezier(.2,.8,.2,1) forwards}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px}
+.facts span{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:500;animation:flt 5s ease-in-out infinite}
+.facts span:nth-child(2){animation-delay:-1.6s}.facts span:nth-child(3){animation-delay:-3.2s}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;margin-top:34px}
+.tk{display:flex;gap:44px;width:max-content;will-change:transform;animation:mq 28s linear infinite}
+.tk span{font:600 18px Unbounded,sans-serif;white-space:nowrap;color:#d9d2f5;display:flex;align-items:center;gap:44px}
+.tk span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--g)}
+section{padding:64px 0}
+h2{font-size:clamp(26px,5.6vw,44px);margin-bottom:12px;font-weight:700}
+.sub{color:var(--mu);max-width:36em;margin:0 0 34px}
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.list{display:grid;gap:20px}
+.proj{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr;border-radius:28px;border:1.5px solid transparent;background:linear-gradient(#0d0919,#0d0919) padding-box,conic-gradient(from var(--ang),#8b5cf6,#ec4899,#fb923c,#8b5cf6) border-box;transition:transform .25s}
+.proj::after{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.09),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.proj:hover::after{opacity:1}
+@media(min-width:780px){.proj{grid-template-columns:1.05fr 1fr}}
+.pan{background:linear-gradient(160deg,#171033,#0a0715);padding:26px 26px 0;min-height:230px;position:relative;overflow:hidden}
+.pan .n{position:absolute;right:22px;top:16px;font:600 13px Unbounded,sans-serif;color:#7b6fa3}
+.win{background:#0a0c0e;border:1px solid #2a3137;border-bottom:0;border-radius:14px 14px 0 0;margin-top:20px;height:100%;min-height:190px;transition:transform .5s}
+.proj:hover .win{transform:translateY(-8px)}
+.win .tb{display:flex;gap:5px;padding:10px 12px;border-bottom:1px solid #2a3137}
+.win .tb i{width:8px;height:8px;border-radius:50%;background:#333c43}
+.win .bd{padding:18px}
+.win b{display:block;height:11px;border-radius:6px;background:#f3f5f6;width:62%;margin-bottom:9px;transform-origin:left;animation:ln 3.4s ease-in-out infinite alternate}
+.win b+b{width:40%;background:#59646c;animation-delay:-1.2s}
+.win em{display:inline-block;height:24px;width:90px;border-radius:99px;background:linear-gradient(90deg,#3b82f6,#22c55e);margin-top:14px}
+.win u{display:inline-block;height:24px;width:66px;border-radius:99px;border:1.5px solid #39434b;margin:14px 0 0 8px}
+.proj .in{padding:26px 26px 30px;display:flex;flex-direction:column;gap:10px}
+.proj h3{font-size:21px;font-weight:600}
+.dom{font-size:13px;font-weight:600;color:#f472b6}
+.proj p{margin:0;color:var(--mu);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tags span{font-size:12px;font-weight:600;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:4px 11px;color:#d9d2f5}
+.proj .go{margin-top:auto;padding-top:14px;font-weight:800;color:#fff}
+.proj .go::after{content:" ↗";display:inline-block;transition:transform .25s}
+.proj:hover .go::after{transform:translate(4px,-4px)}
+.proj.empty{background:rgba(255,255,255,.03);border:1.5px dashed rgba(255,255,255,.22);animation:none;padding:36px 26px;gap:12px;justify-items:start}
+.feat{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.fc{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:24px;padding:26px;transition:transform .3s,border-color .3s,box-shadow .3s}
+.fc:hover{transform:translateY(-6px);border-color:#ec4899;box-shadow:0 20px 50px -24px #ec4899}
+.fc small{font:700 28px Unbounded,sans-serif;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fc h3{font-size:18px;margin:12px 0 8px;font-weight:600}
+.fc p{margin:0;color:var(--mu);font-size:15px}
+.final{position:relative;overflow:hidden;text-align:center;border-radius:32px;padding:64px 24px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(139,92,246,.35),rgba(236,72,153,.3),rgba(251,146,60,.25));}
+.final::before,.final::after{content:"";position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 68%);animation:flt 7s ease-in-out infinite}
+.final::before{width:200px;height:200px;left:-60px;top:-60px}.final::after{width:240px;height:240px;right:-80px;bottom:-90px;animation-delay:-3s}
+.final>*{position:relative;z-index:1}
+.final p{color:#e6dcff;margin:0 auto 28px;max-width:28em}
+.final .cta{justify-content:center}
+footer{padding:30px 0 44px;color:var(--mu);font-size:14px}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes drift{to{transform:translate(90px,70px) scale(1.15)}}
+@keyframes spin{to{--ang:360deg}}
+@keyframes gshift{to{background-position:100% 0}}
+@keyframes rot{to{transform:rotate(360deg)}}
+@keyframes rotc{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes flt{50%{transform:translateY(-8px)}}
+@keyframes ln{to{transform:scaleX(1.35)}}
+@keyframes glow{50%{box-shadow:0 0 18px #22c55e}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(236,72,153,.6)}100%{box-shadow:0 0 0 14px transparent}}
+@media(max-width:700px){.aur i:nth-child(3){display:none}}
+@media(prefers-reduced-motion:reduce){.btn::before{display:none}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.wd,.lead,.hero .cta{opacity:1;transform:none}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="aur" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="pg" id="pg"></div>
+<header><div class="w">
+  <a class="logo" href="#top"><i></i><span data-name>kemsite</span></a>
+  <a class="btn main sm" data-contact href="#contact">Написать</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="ring" aria-hidden="true"></div><div class="w">
+  <h1><span class="wd" style="--i:0">Делаю</span><span class="wd" style="--i:1">сайты,</span><span class="wd" style="--i:2">с</span><span class="wd" style="--i:3">которых</span><span class="wd gt" style="--i:4">звонят</span><span class="wd gt" style="--i:5">и</span><span class="wd gt" style="--i:6">заказывают</span></h1>
+  <p class="lead">Красивые сайты-визитки для малого бизнеса: такси, автоуслуги, мастера. Удобно с телефона, быстро и без лишнего.</p>
+  <div class="cta">
+    <a class="btn main" data-contact href="#contact">Заказать сайт</a>
+    <a class="btn" href="#works">Смотреть работы</a>
+  </div>
+  <div class="facts"><span>Под ваш стиль</span><span>Звонок в одно касание</span><span>Хостинг и домен помогу</span></div>
+</div></div>
+
+<div class="mq" aria-hidden="true"><div class="tk">
+  <span>Сайты-визитки</span><span>Лендинги</span><span>Дизайн под ваш стиль</span><span>Звонок в одно касание</span><span>Запуск под ключ</span><span>Мобильная версия</span>
+  <span>Сайты-визитки</span><span>Лендинги</span><span>Дизайн под ваш стиль</span><span>Звонок в одно касание</span><span>Запуск под ключ</span><span>Мобильная версия</span>
+</div></div>
+
+<section id="works"><div class="w">
+  <h2 class="rv">Мои работы</h2>
+  <p class="sub rv" style="--d:.1s">Реальные сайты для реальных клиентов. Нажмите, чтобы открыть.</p>
+  <div class="list">
+    <div class="rv"><a class="proj" href="https://mezhtaxi42.ru" target="_blank" rel="noopener">
+      <div class="pan"><span class="n">01</span><div class="win"><div class="tb"><i></i><i></i><i></i></div><div class="bd"><b></b><b></b><em></em><u></u></div></div></div>
+      <div class="in"><h3>Такси межгород, Кемерово</h3><span class="dom">mezhtaxi42.ru</span>
+        <p>Сайт для водителя: 35 направлений с ценами и поиском, фото машин со свайпом, звонок или сообщение в одно касание.</p>
+        <div class="tags"><span>Визитка</span><span>Цены и поиск</span><span>Мобильная версия</span></div>
+        <span class="go">Открыть сайт</span></div>
+    </a></div>
+    <div class="rv"><a class="proj" href="https://tonirovka.andreytemnei.workers.dev" target="_blank" rel="noopener">
+      <div class="pan"><span class="n">02</span><div class="win"><div class="tb"><i></i><i></i><i></i></div><div class="bd"><b></b><b></b><em></em><u></u></div></div></div>
+      <div class="in"><h3>Тонировка автомобилей</h3><span class="dom">tonirovka.andreytemnei.workers.dev</span>
+        <p>Сайт услуги в чёрно-бело-сине-зелёном стиле: коротко о работе, цены и быстрая связь с мастером.</p>
+        <div class="tags"><span>Услуги</span><span>Тёмный стиль</span></div>
+        <span class="go">Открыть сайт</span></div>
+    </a></div>
+    <div class="rv"><div class="proj empty">
+      <h3>Следующий сайт ваш</h3>
+      <p>Расскажите о своём деле, и я предложу, как это показать клиентам.</p>
+      <a class="btn main" data-contact href="#contact">Обсудить</a>
+    </div></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2 class="rv">Что вы получите</h2>
+  <p class="sub rv" style="--d:.1s">Сайт, который работает как рекламный листок: открыл и сразу позвонил.</p>
+  <div class="feat">
+    <div class="fc rv"><small>01</small><h3>Удобно с телефона</h3><p>Большинство клиентов заходят с мобильного, поэтому сайт сначала делается под него.</p></div>
+    <div class="fc rv" style="--d:.1s"><small>02</small><h3>Звонок в одно касание</h3><p>Крупные кнопки, понятные цены и контакты на первом экране.</p></div>
+    <div class="fc rv" style="--d:.2s"><small>03</small><h3>Красиво и по-своему</h3><p>Стиль, цвета и фото вашего дела, а не шаблон, как у всех.</p></div>
+    <div class="fc rv" style="--d:.3s"><small>04</small><h3>Запуск под ключ</h3><p>Помогу с адресом сайта и размещением, чтобы он работал в интернете.</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="w">
+  <div class="final rv">
+    <h2>Нужен сайт для своего дела?</h2>
+    <p>Напишите пару слов о том, что делаете, и я отвечу с идеей и сроками.</p>
+    <div class="cta">
+      <a class="btn main" data-contact href="#contact">Написать в MAX</a>
+      <a class="btn" href="#contact" id="ph" hidden>Позвонить</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="w">© <span data-name>kemsite</span>. Сайты для малого бизнеса.<span class="by"> · by Дмитрий, сайты в интернете</span></div></footer>
+
+<script>
+// Заполните свои данные здесь — они подставятся по всему сайту
+var C={
+  name:"kemsite",
+  max:"https://max.ru/u/f9LHodD0cOIeAVr4aC8fP_omANmgWm_LIn5RJK9t9gI6sX6wnPcP0I4j0ko",                  // ссылка на ваш профиль в MAX, вида https://max.ru/u/...
+  phone:"+79609089547"       // номер для кнопки «Позвонить»
+};
+(function(){
+var d=document,r=d.documentElement;
+d.querySelectorAll("[data-name]").forEach(function(e){e.textContent=C.name});
+var tg=C.max||"";
+d.querySelectorAll("[data-contact]").forEach(function(a){if(tg){a.href=tg;a.target="_blank";a.rel="noopener"}else if(C.phone){a.href="tel:"+C.phone}});
+if(C.phone){var p=d.getElementById("ph");p.hidden=false;p.href="tel:"+C.phone}
+var els=d.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add("in")})}
+var pg=d.getElementById("pg"),tk=0;function sp(){tk=0;var h=r.scrollHeight-innerHeight;pg.style.transform="scaleX("+(h>0?Math.min(scrollY/h,1):0)+")"}
+addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(sp)},{passive:true});sp();
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+d.querySelectorAll("a.proj").forEach(function(c){
+c.addEventListener("pointermove",function(e){var b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width,y=(e.clientY-b.top)/b.height;c.style.setProperty("--mx",x*100+"%");c.style.setProperty("--my",y*100+"%");c.style.transform="perspective(900px) rotateX("+((.5-y)*5)+"deg) rotateY("+((x-.5)*7)+"deg) translateY(-4px)"});
+c.addEventListener("pointerleave",function(){c.style.transform=""})})}
+})();
+</script>
+</body>
+</html>
